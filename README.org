@@ -1,7 +1,7 @@
 * Computer Programming 2: My Solutions for our Practical Exam
 
-The following are the solutions for the items I picked, namely, item
-numbers 4, 2, 6 of Test 1 and item numbers 1 and 2 of Test 2.
+The following are my solutions for the items 2, 4, and 6 in Test 1 and
+items 1 and 2 in Test2.  For copying, see the [[*Legal][Legal]] section.
 
 ** Test 1
 
@@ -272,8 +272,8 @@ numbers 4, 2, 6 of Test 1 and item numbers 1 and 2 of Test 2.
 
 ** Legal
 
-You may copy, modify, and redistribute any of the codes below
-provided that you'd put it under the same license if you were to make
-it available.
+You may copy, modify, and redistribute any of the codes below provided
+that if you were to make it available, you'd put it under the same
+license.
 
 Copyright (C) 2025 by Jericho S.
