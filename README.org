@@ -1,0 +1,279 @@
+* Computer Programming 2: My Solutions for our Practical Exam
+
+The following are the solutions for the items I picked, namely, item
+numbers 4, 2, 6 of Test 1 and item numbers 1 and 2 of Test 2.
+
+** Test 1
+
+*** EXAM01.cpp
+
+#+begin_src C++ :tangle EXAM01.cpp :results output
+  #include <iostream>
+  using namespace std;
+
+  string
+  repeat(string str, int n)
+  {
+    string x = "";
+    for (int i = 0; i < n; ++i) {
+      x += str;
+    }
+    return x;
+  }
+
+  int
+  main ()
+  {
+    string s;
+    int n;
+    cout << "Enter string: ";
+    cin >> s;
+    cout << "Repeat this times: ";
+    cin >> n;
+
+    cout << repeat(s, n) << '\n';
+
+    return 0;
+  }
+#+end_src
+
+**** Output
+
+#+begin_src
+  river@forest:practical-final-exam $ ./EXAM01 
+  Enter string: ho
+  Repeat this times: 3
+  hohoho
+#+end_src
+
+*** EXAM02.cpp
+
+#+begin_src C++ :tangle EXAM02.cpp
+  #include <iostream>
+  using namespace std;
+
+  void
+  bar_chart (double values[], int size) {
+    for (int i = 0; i < size; ++i) {
+      for (int j = 0; j < values[i]; ++j) {
+        cout << '*';
+      }
+      cout << '\n';
+    }
+  }
+
+  int main() {
+    int n;
+    cout << "Enter number of lines: ";
+    cin >> n;
+    double values[n];
+    for (int i = 0; i < n; ++i) {
+      cout << "Enter value for value" << "[" << i << "]: ";
+      cin >> values[i];
+    }
+    bar_chart(values, n);
+    return 0;
+  }
+#+end_src
+
+**** Output
+
+#+begin_src
+  river@forest:practical-final-exam [2] $ ./EXAM02 
+  Enter number of lines: 8
+  Enter value for value[0]: 10
+  Enter value for value[1]: 6
+  Enter value for value[2]: 4
+  Enter value for value[3]: 2
+  Enter value for value[4]: 9
+  Enter value for value[5]: 12
+  Enter value for value[6]: 6
+  Enter value for value[7]: 4
+  ,**********
+  ,******
+  ,****
+  ,**
+  ,*********
+  ,************
+  ,******
+  ,****
+#+end_src
+
+*** EXAM03.cpp
+
+#+begin_src C++ :results output
+  #include <iostream>
+  #include <iomanip>
+  using namespace std;
+
+  void multipTable(int size) {
+    for (int i = 1; i <= size; ++i) {
+      for (int j = 1; j <= size; ++j) {
+        cout << left << setw(3) << i * j;
+      }
+      cout << '\n';
+    }
+  }
+
+  int
+  main ()
+  {
+    multipTable(6);
+
+    return 0;
+  }
+#+end_src
+
+**** Output
+
+#+begin_src
+  1  2  3  4  5  6  
+  2  4  6  8  10 12 
+  3  6  9  12 15 18 
+  4  8  12 16 20 24 
+  5  10 15 20 25 30 
+  6  12 18 24 30 36 
+#+end_src
+
+** Test 2
+*** EXAM04.cpp
+
+#+begin_src C++ :results output
+  #include <iostream>
+  using namespace std;
+
+  class BankAccout {
+  private:
+    string name;
+    int account_number;
+    double balance;
+  public:
+    // Constructor
+    BankAccout(string n, int a, double b) {
+      name = n;
+      account_number = a;
+      balance = b;
+    }
+
+    // Methods
+    void deposit_money(double money) {
+      balance += money;
+    }
+    void withdraw_money(double money) {
+      if (balance - money < 0) {
+        cout << "Not enough funds; Please try a lower amount.";
+      } else {
+        balance -= money;
+      }
+    }
+
+    // Accessors
+    string get_name() {return name;}
+    int get_account_number() {return account_number;}
+    double get_balance() {return balance;}
+
+    // Mutators
+    void set_name(string n) { name = n;}
+    void set_account_number(int a) { account_number = a;}
+    void set_balance(double b) { balance = b;}
+  };
+
+  int
+  main ()
+  {
+    // Create object.
+    double amt;
+    BankAccout bank("Edgar", 2484375, 500000);
+    cout << bank.get_name() << "'s balance:"
+         << bank.get_balance() << ".\n";
+
+    // Deposit Amount.
+    amt = 2500;
+    cout << "-- Depositing " << amt << ". --\n";
+    bank.deposit_money(amt);
+    cout << bank.get_name() << "'s balance:"
+         << bank.get_balance() << ".\n";
+
+    // Withdraw Amount.
+    amt = 40300;
+    cout << "-- Withdrawing " << amt << ". --\n";
+    bank.withdraw_money(amt);
+    cout << bank.get_name() << "'s balance:"
+         << bank.get_balance() << ".\n";
+    
+    return 0;
+  }
+#+end_src
+
+**** Output
+
+#+begin_src
+  Edgar's balance:500000.
+  -- Depositing 2500. --
+  Edgar's balance:502500.
+  -- Withdrawing 40300. --
+  Edgar's balance:462200.
+#+end_src
+
+*** EXAM05.cpp
+
+#+begin_src C++
+  #include <iostream>
+  using namespace std;
+
+  class Employee {
+  private:
+    string name;
+    int id;
+    double salary;
+    string department;
+  public:
+    // Constructor
+    Employee(string n, int i, double s, string d) {
+      name = n;
+      id = i;
+      salary = s;
+      department = d;
+    }
+
+    // Methods
+    double calculate_annual_salary() {
+      return salary * 12;
+    }
+
+    // Accessors
+    string get_name() {return name;}
+    int get_id() {return id;}
+    double get_salary() {return salary;}
+    string get_department() {return department;}
+
+    // Mutators
+    void set_name(string n) {name = n;}
+    void set_id(int i) {id = i;}
+    void set_salary(double s) {salary = s;}
+    void set_department(string d) {department= d;}
+  };
+
+  int
+  main ()
+  {
+    Employee employee("Edgar", 2484375, 80000, "Scientist");
+    cout << employee.get_name() << "'s annual salary is: "
+         << employee.calculate_annual_salary() << '.';
+    return 0;
+  }
+#+end_src
+
+**** Output
+
+#+begin_src
+  Edgar's annual salary is: 960000.
+#+end_src
+
+** Legal
+
+You may copy, modify, and redistribute any of the codes below
+provided that you'd put it under the same license if you were to make
+it available.
+
+Copyright (C) 2025 by Jericho S.
