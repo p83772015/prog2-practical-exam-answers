@@ -1,7 +1,7 @@
 * Computer Programming 2 Practical Exam Solutions
 
 The following are my solutions for the Set C Test 1 items 2, 4, and 6 and
-Test 2 items 1 and 2.  For copying, see the [[*Legal][Legal]] section.
+Test 2 items 1 and 2.  For copying, see the [[Legal][Legal]] section.
 
 ** Test 1
 
