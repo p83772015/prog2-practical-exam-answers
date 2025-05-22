@@ -4,7 +4,7 @@ The following are my solutions for the Set C Test 1 items 2, 4, and 6 and
 Test 2 items 1 and 2.
 
 Test 1 contains problems similar to the programming problems 1-60.
-There are five of them but only 3 items is needed to be solved.
+There are five of them but only 3 items are needed to be solved.
 
 Test 2 contains OOP problems.  To get a point, a *constructor* and the
 *getters* and *setters* for your class's every declared attribute must be
