@@ -272,7 +272,7 @@ Test 2 items 1 and 2.  For copying, see the section at the end of the file.
 
 ** Legal
 
-You may copy, modify, and redistribute any of the codes below provided
+You may copy, modify, and redistribute any of the codes above provided
 that if you were to make it available, you'd put it under the same
 license.
 
