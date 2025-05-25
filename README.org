@@ -6,9 +6,10 @@ Test 2 items 1 and 2.
 Test 1 contains problems similar to the programming problems 1-60.
 There are five of them but only 3 items are needed to be solved.
 
-Test 2 contains OOP problems.  To get a point, a *constructor* and the
-*getters* and *setters* for your class's every declared attribute must be
-present.
+Test 2 contains OOP problems.  Sir considers an item valid only when:
+(1) You write the construtor; (2) Define appropriate getters and
+setters of every private attribute of you class; (3) Store attributes,
+or the variables, under the ~private~ block.
 
 For copying, see the section at the end of the file.
 
